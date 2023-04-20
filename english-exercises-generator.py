@@ -24,7 +24,7 @@ sentences = [
 st.header('Генератор упражнений по английскому')
 st.subheader('Вставьте текст для создания упражнения')
 
-st.text_area('')
+st.text_area('nolabel', label_visibility="hidden")
 
 '---'
 
