@@ -15,7 +15,7 @@ tasks = [
      'total'   : 0
     },
     
-    {'sentence': 'Snow {_____} steadily on to hats and shoulders; gloved fingers {_____} lenses clear.',
+    {'sentence': 'Snow _____ steadily on to hats and shoulders; gloved fingers {_____} lenses clear.',
      'options' : [['fell', 'had fallen'], ['wiped','were wiping']], 
      'answers' : ['fell', 'were wiping'],
      'result'  : ['', ''],
