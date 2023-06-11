@@ -1,28 +1,28 @@
 import streamlit as st
 
 tasks = [ 
-    {'sentence': 'THE BUZZ IN THE STREET _____ like the humming of flies.',
+    {'sentence': 'THE BUZZ IN THE STREET {_____} like the humming of flies.',
      'options' : [['was', 'is']], 
      'answers' : ['was'],
      'result'  : [''],
      'total'   : 0
     },
     
-    {'sentence': 'Photographers _____ massed behind barriers patrolled by police, their long-snouted cameras poised, their breath rising like steam.',
+    {'sentence': 'Photographers {_____} massed behind barriers patrolled by police, their long-snouted cameras poised, their breath rising like steam.',
      'options' : [['stood', 'were standing']], 
      'answers' : ['were standing'],
      'result'  : [''],
      'total'   : 0
     },
     
-    {'sentence': 'Snow _____ steadily on to hats and shoulders; gloved fingers _____ lenses clear.',
+    {'sentence': 'Snow _____ steadily on to hats and shoulders; gloved fingers {_____} lenses clear.',
      'options' : [['fell', 'had fallen'], ['wiped','were wiping']], 
      'answers' : ['fell', 'were wiping'],
      'result'  : ['', ''],
      'total'   : 0
     },
     
-    {'sentence': 'From time to time there _____ outbreaks of desultory clicking, as the watchers _____ the waiting time by snapping the white canvas tent in the middle of the road, the entrance to the tall red-brick apartment block behind it, and the balcony on the top floor from which the body _____.',
+    {'sentence': 'From time to time there {_____} outbreaks of desultory clicking, as the watchers {_____} the waiting time by snapping the white canvas tent in the middle of the road, the entrance to the tall red-brick apartment block behind it, and the balcony on the top floor from which the body {_____}.',
      'options' : [['came', 'come'], ['filled', 'had filled'], ['had fallen', 'was falling']],
      'answers' : ['came', 'filled', 'had fallen'],
      'result'  : ['', '', ''],
