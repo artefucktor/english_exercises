@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="profile-tab">
+    <p>Для загрузки нужен датасет по шаблону</p>
+    <blockquote class="blockquote">
+        <p>columns=['raw', 'type', 'object', 'options', 'answer']</p>
+        <p></p>
+    </blockquote>
+    <dl class="row">
+      <dt class="col-sm-3">raw</dt>
+      <dd class="col-sm-9">Исходный текст предложения</dd>
+
+      <dt class="col-sm-3">type</dt>
+      <dd class="col-sm-9">тип упражнения ['select_word', 'noun_phrases', 'select_sent', 'missing_word']</dd>
+
+      <dt class="col-sm-3">object</dt>
+      <dd class="col-sm-9">объект задания – элемент для замены на код</dd>
+
+      <dt class="col-sm-3">options</dt>
+      <dd class="col-sm-9">список вариантов ответов</dd>
+
+      <dt class="col-sm-3">answer</dt>
+      <dd class="col-sm-9">правильный ответ</dd>
+    </dl>
+    <img src="{{ url_for('static', filename='screenshot.png') }}" class="img-fluid">
+  </div>
+
+  <div class="tab-pane fade" id="source" role="tabpanel" aria-labelledby="profile-tab">
+    {% for sent in sents.itertuples() %}
+        <p>{{ sent['raw']|safe }}</p>
+    {% endfor %}
+  </div>
+
+  <div class="tab-pane fade" id="transformed" role="tabpanel" aria-labelledby="home-tab">
+    {% for i in sents.index %}
+    <div class="row">
+        <div class="col-sm">
+            <p>{{ sents.loc[i, 'description'] }}</p>
+        </div>
+        <div class="col-sm-6"">
+            <p>{{ sents.loc[i, 'transformed_sent']|safe }}</p>
+        </div>
+        <div class="col-sm">
+            <p class='text-black-50' id='p{{i}}'></p>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
